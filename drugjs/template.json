@@ -1,0 +1,15 @@
+{
+	category: '',
+	description: '',
+	drugs: [{
+		name: '',
+		description: '',
+		cons: '',
+		effects: ''
+		stories: [{
+			name: '',
+			user: '',
+			story: ''
+		}]
+	}],
+}

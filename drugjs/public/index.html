@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="eng">
+<head>
+  <title>DrugEd</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+	  $("#click").click(function() {
+	    $.ajax({
+		  type: "POST",
+		  dataType: "json",
+		  url: "/drugs",
+		  contentType: "application/json",
+		  data: JSON.stringify({category: "Psychoactiv"}),
+		  success: function(msg) {
+		    alert(JSON.stringify(msg));
+		  }
+		});
+	  });
+	});
+  </script>
+</head>
+<body>
+
+  <button id="click">Hit me hard!</button>
+</body>
+</html>

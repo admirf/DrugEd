@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="DrugEd.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DrugEd"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:src="using:DrugEd"
+    mc:Ignorable="d">
+
+    <Grid Background="Azure">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="7*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <src:Categories x:Key="categories"/>
+        </Grid.Resources>
+        
+        <TextBlock Grid.Row="0" Text="DrugEd" FontSize="28" HorizontalAlignment="Center" Padding="0 10 0 10"></TextBlock>
+        <TextBlock x:Name="mottoTextBlock" Grid.Row="1" FontSize="22" TextWrapping="Wrap" HorizontalAlignment="Center" Padding="10 10 10 10"></TextBlock>
+
+        <ListBox Background="Azure" x:Name="mainListBox" HorizontalContentAlignment="Stretch" Padding="0 10 0 0" Grid.Row="2" ItemsSource="{StaticResource categories}" SelectionChanged="ListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Text}" FontSize="22"  HorizontalAlignment="Center"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        <Image Source="/Assets/Logo.png" Grid.Row="3" NineGrid="0" Margin="0,0,0,15"/>
+    </Grid>
+</Page>

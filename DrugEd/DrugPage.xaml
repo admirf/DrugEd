@@ -1,0 +1,108 @@
+﻿<Page
+    x:Class="DrugEd.DrugPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DrugEd"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:src="using:DrugEd"
+    mc:Ignorable="d">
+
+    <Grid Background="Azure">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="{Binding Path=DrugProperty.name}" HorizontalAlignment="Center" FontSize="20"></TextBlock>
+        <Image HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="{Binding Path=DrugProperty.img}" Grid.Row="1" NineGrid="0,0,0,10"></Image>
+        <Grid Grid.Row="2">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" ></ColumnDefinition>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border Background="Lavender" Grid.Row="0" Grid.Column="0">
+                <TextBlock TextWrapping="Wrap" Text="Drug category:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="0" Grid.Column="1" Text="{Binding Path=DrugProperty.category}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+
+            <Border Background="Lavender" Grid.Row="1" Grid.Column="0">
+                <TextBlock TextWrapping="Wrap"  Text="Alternative names:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Text="{Binding Path=DrugProperty.alterNames}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+            <Border Background="Lavender" Grid.Row="2" Grid.Column="0">
+                <TextBlock TextWrapping="Wrap" Text="Consumable forms:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="2" Grid.Column="1" Text="{Binding Path=DrugProperty.shapes}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+
+            <Border Background="Lavender" Grid.Row="3" Grid.Column="0">
+                <TextBlock TextWrapping="Wrap" Text="Consumation effects:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="3" Grid.Column="1" Text="{Binding Path=DrugProperty.effects}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+
+            <Border Background="Lavender" Grid.Row="4" Grid.Column="0">
+                <TextBlock TextWrapping="Wrap" Text="Legal in:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="4" Grid.Column="1" Text="{Binding Path=DrugProperty.listLegalCountries}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+
+            <Border Background="Lavender" Grid.Row="5" Grid.Column="0">
+                <TextBlock TextWrapping="Wrap" Text="Addictive:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="5" Grid.Column="1" Text="{Binding Path=DrugProperty.addictive}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+
+            <Border Background="Lavender" Grid.Row="6" Grid.Column="0">
+                <TextBlock TextWrapping="Wrap" Text="Physical dependence:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="6" Grid.Column="1" Text="{Binding Path=DrugProperty.physicalDependence}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+
+            <Border Background="Lavender" Grid.Row="7" Grid.Column="0">
+                <TextBlock TextWrapping="Wrap" Text="Psychological dependence:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="7" Grid.Column="1" Text="{Binding Path=DrugProperty.psychologicalDependence}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+
+            <Border Background="Lavender" Grid.Row="8" Grid.Column="0">
+                <TextBlock TextWrapping="Wrap" Text="Number of users:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="8" Grid.Column="1" Text="{Binding Path=DrugProperty.users}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+
+            <Border Background="Lavender" Grid.Row="9" Grid.Column="0">
+                <TextBlock TextWrapping="Wrap"  Text="Duration of effect:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="9" Grid.Column="1" Text="{Binding Path=DrugProperty.effectDuration}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+
+            <Border Background="Lavender" Grid.Row="10" Grid.Column="0"  >
+                <TextBlock TextWrapping="Wrap" Text="Manifestation time:" HorizontalAlignment="Center" FontSize="13.333" VerticalAlignment="Center" Margin="4"></TextBlock>
+            </Border>
+            <TextBlock TextWrapping="Wrap" Grid.Row="10" Grid.Column="1" Text="{Binding Path=DrugProperty.effectIncubation}" FontSize="13.333" VerticalAlignment="Center" Margin="15,4,4,4"/>
+
+        </Grid>
+
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Click="Button_Click" Content="Back" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Button>
+            <Button Click="Button_Click_1" Background="DarkGray" Content="Stories" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Button>
+        </Grid>
+    </Grid>
+</Page>

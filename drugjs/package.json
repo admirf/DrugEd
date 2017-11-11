@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for DrugEd",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "admirf",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.0"
+  }
+}
